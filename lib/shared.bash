@@ -256,7 +256,7 @@ function build_image_override_file_with_version() {
 # Runs the docker-compose command, scoped to the project, with the given arguments
 function run_docker_compose() {
   echo "+++ :docker: Environment"
-  echo "COMPOSE_PROFILES=$COMPOSE_PROFILES"
+  echo "COMPOSE_PROFILES=${COMPOSE_PROFILES:-undefined}"
 
   local command=(docker-compose)
   if [[ "$(plugin_read_config CLI_VERSION "2")" == "2" ]] ; then
