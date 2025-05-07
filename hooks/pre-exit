@@ -45,3 +45,6 @@ if [[ "${builder_remove}" == true ]]; then
     echo "~~~ :warning: Cannot remove Builder Instance '${builder_name}' as does not exist"
   fi
 fi
+
+echo "--- :docker: List all docker containers"
+docker ps -a

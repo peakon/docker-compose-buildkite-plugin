@@ -82,3 +82,6 @@ else
     current_builder_driver=$(docker buildx inspect | grep -m 1 "Driver" | awk '{print $2}') || true
     echo "~~~ :docker: Using Default Builder '${current_builder}' with Driver '${current_builder_driver}'"
 fi
+
+echo "--- :docker: List all docker containers"
+docker ps -a
